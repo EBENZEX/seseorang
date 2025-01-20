@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+* {
+    font-family: 'Poppins', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: rgba(255, 182, 193, 0.9); /* Tidak digunakan pada teks gradien */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ffe4e1, #f8c3ff, #fff4e1); /* Gradien pastel */
+}
+
+.greetings {
+    font-size: 6rem;
+    font-weight: 900;
+    text-align: center;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff758a);
+ /* Sama dengan latar belakang */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px #e100ff, 0 0 15px #e100ff; /* Sentuhan glow */
+    animation: glow 2.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 20px #f8c3ff, 0 0 40px #ffe4e1, 0 0 60px #fff4e1;
+    }
+    50% {
+        text-shadow: 0 0 10px #ffe4e1, 0 0 20px #f8c3ff, 0 0 30px #fff4e1;
+    }
+}
+
+.description {
+    max-width: 600px; /* Batas lebar kotak */
+    margin: 20px auto; /* Pusatkan secara horizontal */
+    padding: 20px; /* Tambahkan jarak di dalam kotak */
+    background-color: #fffae5; /* Warna latar belakang kotak */
+    border: 2px solid #ff69b4; /* Batas warna pink */
+    border-radius: 15px; /* Membuat sudut kotak melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan lembut */
+    font-family: Arial, sans-serif; /* Gaya font */
+    font-size: 16px; /* Ukuran teks */
+    line-height: 1.6; /* Jarak antarbaris */
+    color: #333; /* Warna teks */
+    text-align: center; /* Teks rata tengah */
+  }
+  
+  .description span {
+    display: inline-block; /* Agar teks tetap berada di dalam kotak */
+  }
+  
+
+.button a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #000000; /* Tetap seperti sebelumnya */
+}
+
+@media screen and (max-width: 574px) {
+    .greetings {
+        display: block;
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+    }
+    .description {
+        font-size: 1rem;
+    }
+
+    .button a {
+        font-size: 0.5rem;
+    }
+}
